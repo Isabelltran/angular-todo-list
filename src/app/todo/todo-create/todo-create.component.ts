@@ -29,6 +29,7 @@ export class TodoCreateComponent {
     this.todoServer.addTodo(this.todo).subscribe({
       next: (todo) => {
         this.todo = '';
+        window.location.reload();
       },
     });
   }
